@@ -1,0 +1,12 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{config.extra.name}}'s Blog</title>
+  <link rel="stylesheet" href="/index.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  {% block rss %}
+   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+  {% endblock %}
+</head>
+
+
+<center>404. Page not found.</center>
