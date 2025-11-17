@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{config.extra.name}}'s Blog</title>
+  <link rel="stylesheet" href="/index.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  {% block rss %}
+   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+  {% endblock %}
+</head>
+
+<body>
+  <main>
+      {% block content %} {% endblock content %}
+  </main>
+  <footer>
+    <hr/>
+    <ul>
+      <li><a class="static-link" href="/">Home</a></li>
+      <li><a class="static-link" href="{{ config.extra.github_url }}" target="_blank">GitHub</a></li>
+      <li><a class="static-link" href="/atom.xml" target="_blank">RSS</a></li>
+    </ul>
+    <p>&copy; {{ now() | date(format="%Y")}} {{config.extra.name}}</p>
+  </footer>
+</body>
+
+</html>

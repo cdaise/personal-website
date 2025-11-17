@@ -1,0 +1,39 @@
+@import url("syntax-theme-dark.css") (prefers-color-scheme: dark);
+@import url("syntax-theme-light.css") (prefers-color-scheme: light);
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: monospace;
+  line-height: 1.5;
+  font-size: 1rem;
+  max-width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+  margin-inline: auto
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+}
+
+footer p {
+  text-align: center;
+}
+
+.static-link, .static-link:visited, .static-link:hover, .static-link:active {
+  color: light-dark(rgb(0, 0, 238), #8c8cff); 
+}
+

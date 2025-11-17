@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div>
+    <h1>{{ config.extra.name }}</h1>
+    <p>On Technology, Inquiry, Musings.</p>
+  </div>
+  
+  <ul>
+   {% set blog_section = get_section(path="blog/_index.md") %}
+      {% for page in blog_section.pages %}
+         <li>
+         <article>
+           <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+           <span>{{ page.date | date(format="%d %b %Y") }}</span>
+         </article>
+         </li>
+    </div>
+      {% endfor %}
+  </ul>
+{% endblock content %}
